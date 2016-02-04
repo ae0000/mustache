@@ -425,6 +425,8 @@ func isEmpty(v reflect.Value) bool {
 		return !val.Bool()
 	case reflect.Slice:
 		return val.Len() == 0
+	case reflect.String:
+		return val.Len() == 0
 	}
 
 	return false
